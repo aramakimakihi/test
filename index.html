@@ -1,4 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charesrt="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>スマート農法</title>
+
+<link rel="stylesheet"href="mystyle.css">
+
+<style>
+    .parent ul{
+      display: none;
+    }
+    .active {
+      background-color: rgb(172, 228, 244);
+    }
+    .active ul {
+      display: block;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+    <h1><font color=#000000>スマート農業</font></h1>
+</header>
+    
+ここではARで間違い探ししてみよう！
+    
+    <html>
     <head>
         <title>Title</title>
         <meta charset="utf-8" />
@@ -18,3 +50,38 @@
         ></model-viewer>
     </body>
 </html>
+
+<ul>
+    <li class="parent" onclick="func1(this)">遊び方
+      <ul>
+        <li>ちょうど真上にある丸いボタンを押すとゲームがはじまります．出てきたARが大きすぎたら二本の指大きさを調整してください．</li>
+      </ul>
+    </li>
+    <li class="parent" onclick="func1(this)">回答と解説
+      <ul>
+        <li>回答｛「一つ」はエアコンを操作しているのがリモコンかスマートフォンの違いだよ．｝</li>
+        <li>回答｛「二つ」はドアのカギ部分に機械がついてるよ｝</li>
+        <li>回答｛「三つ」は机の上にあるものが違うよ｝</li>
+        <li>解説｛「IoT」は「モノのインターネット」を意味する言葉です． つまり，身の周りのあらゆるモノがインターネットにつながることを指します！例えばここで紹介したのは，
+            「スマート家電（スマートフォン一つで操作できる家電のこと）」，「スマートロック（スマートフォン一つで操作できるカギのこと｝」「ウェアラブルデバイス（身につけて使用するタイプの端末のこと）」</li>
+      </ul>
+    </li>
+  </ul>
+    
+    
+<main>
+    <h2>
+        <a href="https://aramakimakihi.github.io/test2/" target="_blank">次のゲーム</a>
+    </h2>
+</main>
+    
+  <script>
+    function func1(e) {
+      e.classList.toggle("active");
+    }
+  </script>
+
+<footer>
+        近畿大学工学部情報学科教育情報システム研究室
+</footer>
+</body>
