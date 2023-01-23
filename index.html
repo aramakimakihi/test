@@ -1,87 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charesrt="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>IoT</title>
-
-<link rel="stylesheet"href="mystyle.css">
-
-<style>
-    .parent ul{
-      display: none;
-    }
-    .active {
-      background-color: rgb(172, 228, 244);
-    }
-    .active ul {
-      display: block;
-    }
-  </style>
-
+  <meta charset="UTF-8">
+  <!-- aframeフレームワークのjsを読み込む -->
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  
+  <title>A-Frame</title>
 </head>
-<body>
+<body　style="margin: 0; overflow: hidden;">
+    <a-sceneembedded arjs>
+  <a-assets>
+    <a-asset-item id="prot" src="./prot/prot.gltf"></a-asset-item>
+  </a-assets>
 
-<header>
-    <h1><font color=#000000>IoT</font></h1>
-</header>
-    
-ここではARで間違い探ししてみよう！
-    
-    <html>
-    <head>
-        <title>Title</title>
-        <meta charset="utf-8" />
-        <meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-    </head>
-    <!-- [prot] -->
-    <body>
-        <model-viewer
-          ar-modes="scene-viewer webxr quick-look"
-          src="./prot/prot.glb"
-          ios-src="./prot/prot.usdz"
-          camera-controls
-          auto-rotate
-          ar
-        ></model-viewer>
-    </body>
-</html>
-
-<ul>
-    <li class="parent" onclick="func1(this)">遊び方
-      <ul>
-        <li>ちょうど真上にある丸いボタンを押すとゲームがはじまります．出てきたARが大きすぎた場合二本指で大きさを調整してください．また，ARの位置は自由に動かすことが出来ます．</li>
-      </ul>
-    </li>
-    <li class="parent" onclick="func1(this)">回答と解説
-      <ul>
-        <li>回答｛「一つ」はエアコンを操作しているのがリモコンかスマートフォンの違いだよ．｝</li>
-        <li>回答｛「二つ」はドアのカギ部分に機械がついてるよ｝</li>
-        <li>回答｛「三つ」は机の上にあるものが違うよ｝</li>
-        <li>解説｛「IoT」は「モノのインターネット」を意味する言葉です． つまり，身の周りのあらゆるモノがインターネットにつながることを指します！例えばここで紹介したのは，
-            「スマート家電（スマートフォン一つで操作できる家電のこと）」，「スマートロック（スマートフォン一つで操作できるカギのこと｝」「ウェアラブルデバイス（身につけて使用するタイプの端末のこと）」</li>
-      </ul>
-    </li>
-  </ul>
-    
-    
-<main>
-    <h2>
-        <a href="https://aramakimakihi.github.io/test2/" target="_blank">次のゲーム</a>
-    </h2>
-</main>
-    
-  <script>
-    function func1(e) {
-      e.classList.toggle("active");
-    }
-  </script>
-
-<footer>
-        近畿大学工学部情報学科教育情報システム研究室
-</footer>
+        <a-marker preset="hiro">
+        <a-entity gltf-model="#prot"
+          scale="1 1 1"
+          position="0 0.5 0"
+          rotation="0 0 0" 
+          animation-mixer>
+        </a-entity>
+        </a-marker>
+    </a-scene>
 </body>
+</html>
