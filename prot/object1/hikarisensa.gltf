@@ -1123,9 +1123,9 @@
         {
             "bufferView" : 67,
             "componentType" : 5126,
-            "count" : 181,
+            "count" : 271,
             "max" : [
-                7.5
+                11.25
             ],
             "min" : [
                 0
@@ -1135,19 +1135,19 @@
         {
             "bufferView" : 68,
             "componentType" : 5126,
-            "count" : 181,
+            "count" : 271,
             "type" : "VEC3"
         },
         {
             "bufferView" : 69,
             "componentType" : 5126,
-            "count" : 181,
+            "count" : 271,
             "type" : "VEC3"
         },
         {
             "bufferView" : 70,
             "componentType" : 5126,
-            "count" : 181,
+            "count" : 271,
             "type" : "VEC3"
         }
     ],
@@ -1489,28 +1489,28 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 724,
+            "byteLength" : 1084,
             "byteOffset" : 7606172
         },
         {
             "buffer" : 0,
-            "byteLength" : 2172,
-            "byteOffset" : 7606896
+            "byteLength" : 3252,
+            "byteOffset" : 7607256
         },
         {
             "buffer" : 0,
-            "byteLength" : 2172,
-            "byteOffset" : 7609068
+            "byteLength" : 3252,
+            "byteOffset" : 7610508
         },
         {
             "buffer" : 0,
-            "byteLength" : 2172,
-            "byteOffset" : 7611240
+            "byteLength" : 3252,
+            "byteOffset" : 7613760
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 7613412,
+            "byteLength" : 7617012,
             "uri" : "hikarisensa.bin"
         }
     ]
