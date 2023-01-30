@@ -1,28 +1,93 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <!-- aframeフレームワークのjsを読み込む -->
-  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+<head>  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   
-  <title>A-Frame</title>
-</head>
-<body　style="margin: 0; overflow: hidden;">
-    <a-sceneembedded arjs>
-  <a-assets>
-    <a-asset-item id="prot" src="./prot/prot.gltf"></a-asset-item>
-  </a-assets>
+  <link rel="stylesheet"href="mystyle.css">
+  
+  <style>
+    .parent ul{
+      display: none;
+    }
+    .active {
+      background-color: rgb(172, 228, 244);
+    }
+    .active ul {
+      display: block;
+    }
+  </style>
+  
+  <title>AR テスト</title>
+  
+  <script src="https://aframe.io/releases/1.0.2/aframe.min.js"></script>
+  <script src="./js/aframe-ar.js"></script>
+  <script src="./js/aframe-extras.js"></script>
+ 
+  <script src="./js/aframe-text-geometry-component.min.js"></script>
+  <script src="./js/jquery-3.2.1.min.js"></script>
 
-        <a-marker preset="hiro">
-        <a-entity gltf-model="#prot"
-          scale="1 1 1"
-          position="0 0.5 0"
-          rotation="0 0 0" 
-          animation-mixer>
-        </a-entity>
-        </a-marker>
-    </a-scene>
+</head>
+
+   <html>
+    
+      <body style='margin: 0; overflow: hidden;'>
+    
+        <a-scene embedded arjs="debugUIEnabled:false;"  renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
+    
+          <a-assets>
+          <a-asset-item id="model" src="./prot/object1/iphone.gltf"></a-asset-item>
+          </a-assets>
+        
+            <a-marker preset="hiro">
+        
+              <a-entity gltf-model="#model" scale="1 1 1" rotation="0 0 0" position="0 0.5 0" animation-mixer="loop:pingpong" ></a-entity>
+    
+            </a-marker>
+
+    <!-- ⑥ カメラを追加 -->
+          <a-entity camera></a-entity>
+        </a-scene>
+
+  <!-- アイコンボタン -->
+    <!-- 左寄せ -->
+        <div id="hidari1"　style="position: fixed; bottom: 75px;">　
+          <a href="https://fukutaiga.github.io/DXtest2/">
+            <img src="./prot/img/kasokudosensa.PNG" alt="加速度センサー">
+          </a>
+        </div>
+
+        <div id="hidari2" style="position: fixed; bottom: 100px;">
+          <a href="https://fukutaiga.github.io/DXtest3/">
+            <img src="./prot/img/zyairosensa.PNG" alt="ジャイロセンサー" width="75" height="75">
+          </a>
+        </div>
+
+        <div id="hidari3" style="position: fixed; bottom: 50px;">
+          <a href="https://fukutaiga.github.io/DXtest4/">
+            <img src="./prot/img/zikisensa.PNG" alt="磁気センサー" width="75" height="75">
+          </a>
+        </div>
+        
+    <!-- 右寄せ 
+        <div id="migi1" style="position: fixed; bottom: 150px;" align=”right”>
+          <a href="https://fukutaiga.github.io/DXtest5/">
+            <img src="./prot/img/seitaisensa.PNG" alt="生体認証センサー" width="75" height="75">
+          </a>
+        </div>
+
+        <div id="migi2" style="position: fixed; bottom: 175px;" align=”right”>
+          <a href="https://fukutaiga.github.io/DXtest6/">
+            <img src="./prot/img/gpssensa.PNG" alt="GPSセンサー" width="75" height="75">
+          </a>
+        </div>
+
+        <div id="migi3" style="position: fixed; bottom: 125px;" align=”right”>
+          <a href="https://fukutaiga.github.io/DXtest7/">
+            <img src="./prot/img/hikarisensa.PNG" alt="光センサー" width="75" height="75">
+          </a>
+        </div>
+     -->
+        
 </body>
-</html>
+
+    </html>
